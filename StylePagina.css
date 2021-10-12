@@ -9,10 +9,9 @@ html {
   }
 
   .item {
-    border: 1px solid #000;
-    background-color: gray;
+    /* border: 1px solid #000;
+    background-color: gray; */
 
-    /* centrado perfecto, usando flexbox */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,6 +42,9 @@ html {
       display: flex;
       justify-content: space-around;
       align-items: center;
+      color: rgb(95, 95, 95);
+      font-size: 180%;
+      margin-right: 30%;
   }
 
   .item-derecha {
@@ -55,35 +57,87 @@ html {
   .main {
     display: grid;
     grid-auto-flow: column;
+    grid-column: 1 / span 2;
+    grid-row: 2 /span 3;
     grid-template-columns: 3fr 7fr;
+    margin-top: 20px;
   }
 
-    /* Fotitos izquierda */
+    /* Fotos de la izquierda */
     .item-izquierdo {
         display: grid;
         grid-template-columns: repeat(3, 215px);
         grid-template-rows: repeat(3, 215px);
-    }
-
-    .item-busito, .item-persona {
-    width: 430px;
-    height: 430px;
+        height: 644px;
     }
 
     .item-busito {
-        grid-column:1/2;
-        grid-row: 1/2;
-        z-index: -1;
+      grid-column: 1 / span 3;
+      grid-row: 1 / span 3;
+      height: 430px;
+      width: 430px;
+      z-index: -1;
     }
 
     .item-persona {
-        grid-column:2/3;
-        grid-row: 2/3;
+      grid-column: 2 / span 4;
+      grid-row: 2 / span 4;
+      height: 430px;
+      width: 430px;
     }
 
-    /* Cosas de la derecha */
-    .item-derecha {
-        display: grid;
-        grid-column: 2 / span 2;
+    /* Descripciones de la derecha */
+    .item-cositas {
+      display: grid;
+      grid-auto-flow: column;
+      grid-column:2/span 3;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
     }
 
+    .descripciongeneral {
+      display: grid;
+      grid-auto-flow: column;
+      grid-column: 1/ span 3;
+      grid-row: 1/ span 2;
+    }
+
+    .item-descripcion_general{
+      text-align: center;
+      margin-right: 10%;
+      margin-top: 5%;
+      font-size: 200%;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .descripcion_secundaria {
+      grid-column: 1/span 2;
+      grid-row: 2/ span 4;
+      margin-left: 20%;
+      font-size: 110%;
+      text-align: justify;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .item-titulo_general {
+      margin-top: 23%;
+      font-size: 320%;
+      font-family: 'Franklin Gothic Medium';
+    }
+
+    .btn_vermas {
+      width: 300px;
+      height: 60px;
+      margin-top: 3%;
+      border-radius: 24px;
+      background-color: rgb(20, 6, 83);
+      color: cornsilk;
+    }
+
+    .item-imgamarillo {
+      grid-column: 2/span 5;
+      grid-row: 2/ span 4;
+      z-index: -1;
+      height: 420px;
+      width: 1260px;
+    }
