@@ -1,0 +1,89 @@
+html {
+    box-sizing: border-box;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  .item {
+    border: 1px solid #000;
+    background-color: gray;
+
+    /* centrado perfecto, usando flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    grid-template-rows: 2fr 8fr;
+    gap: 5px;
+  }
+
+  /* Barrita de arriba que ocupa todo el encabezado de la pagina */
+  .nav {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column: 1 / span 2;
+    grid-template-columns: 3fr 7fr;
+  }
+
+  .item-Pagina_Nav {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 8fr 2fr;
+  }
+
+  .item-izquierda{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+
+  .item-derecha {
+    display: grid;
+    grid-auto-flow: column;
+    margin-right: 35%;
+  }
+
+  /* Contenido principal */
+  .main {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 3fr 7fr;
+  }
+
+    /* Fotitos izquierda */
+    .item-izquierdo {
+        display: grid;
+        grid-template-columns: repeat(3, 215px);
+        grid-template-rows: repeat(3, 215px);
+    }
+
+    .item-busito, .item-persona {
+    width: 430px;
+    height: 430px;
+    }
+
+    .item-busito {
+        grid-column:1/2;
+        grid-row: 1/2;
+        z-index: -1;
+    }
+
+    .item-persona {
+        grid-column:2/3;
+        grid-row: 2/3;
+    }
+
+    /* Cosas de la derecha */
+    .item-derecha {
+        display: grid;
+        grid-column: 2 / span 2;
+    }
+
